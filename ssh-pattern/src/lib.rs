@@ -101,10 +101,11 @@ fn init(config_dir: RString) -> State {
     let added_terminals = mem::take(&mut config.terminals);
     terminals.extend(added_terminals);
 
+    let host_entries = querier::parse_ssh_config(&config.ssh_config_paths);
     State {
         config,
         terminals,
-        host_entries: Vec::new(),
+        host_entries,
         querier_terminal: None,
     }
 }
@@ -127,7 +128,6 @@ fn get_matches(input: RString, state: &mut State) -> RVec<Match> {
     let Some(querier) = querier else {
         return RVec::new();
     };
-    state.host_entries = querier::parse_ssh_config(&state.config.ssh_config_paths);
     state.querier_terminal = querier.terminal.map(ToOwned::to_owned);
 
     let matches: Vec<(&querier::HostEntry, i64)> = if querier.search.is_empty() {

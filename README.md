@@ -8,7 +8,7 @@ A collection of [anyrun](https://github.com/anyrun-org/anyrun) plugins written i
 
 | Plugin        | Description                                                       |
 |---------------|-------------------------------------------------------------------|
-| `ssh-pattern` | Fuzzy-search and connect to hosts defined in your SSH config files, more information in [`ssh-pattern/README.md`](ssh-pattern/README.md). |
+| `ssh-pattern` | Fuzzy-search and connect to hosts defined in your SSH config files,<br> more information in [`ssh-pattern/README.md`](ssh-pattern/README.md). |
 
 ## Repository Layout
 

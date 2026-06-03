@@ -142,7 +142,9 @@ pub(crate) fn parse_ssh_config(paths: &[String]) -> Vec<HostEntry> {
             }
         }
     }
-    hosts.into_values().collect()
+    let mut hosts: Vec<HostEntry> = hosts.into_values().collect();
+    hosts.sort_by(|a, b| a.host.cmp(&b.host));
+    hosts
 }
 
 #[cfg(test)]

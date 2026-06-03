@@ -88,7 +88,7 @@
           };
 
           devShells.default = pkgs.mkShell {
-            inputsFrom = [ self'.packages.default ];
+            inputsFrom = builtins.attrValues memberPackages;
             packages = [
               rustToolchain
               pkgs.taplo

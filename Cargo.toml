@@ -1,0 +1,19 @@
+[workspace]
+resolver = "3"
+members = ["ssh-pattern"]
+
+[workspace.package]
+version = "0.1.0"
+authors = ["thinkgo <thinkgo@aliyun.com>"]
+edition = "2024"
+rust-version = "1.96"
+description = "anyrun-plugins is a plugin collection for anyrun."
+keywords = ["anyrun"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/thinkgos/anyrun-plugins"
+repository = "https://github.com/thinkgos/anyrun-plugins"
+
+[workspace.dependencies]
+anyrun-plugin = { git = "https://github.com/anyrun-org/anyrun" }
+abi_stable = "0.11.1"

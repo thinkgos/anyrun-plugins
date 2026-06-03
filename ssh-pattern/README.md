@@ -6,7 +6,7 @@ Search and connect to SSH hosts defined in your SSH config files.
 
 Type in the search bar to fuzzy-match against your SSH hosts:
 
-```shell
+```
 / <search>              # Search hosts by name
 ```
 

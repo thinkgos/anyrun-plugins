@@ -6,7 +6,7 @@ members = ["ssh-pattern"]
 version = "0.1.0"
 authors = ["thinkgo <thinkgo@aliyun.com>"]
 edition = "2024"
-rust-version = "1.95"
+rust-version = "1.96"
 description = "anyrun-plugins is a plugin collection for anyrun."
 keywords = ["anyrun"]
 license = "Apache-2.0"
@@ -17,3 +17,13 @@ repository = "https://github.com/thinkgos/anyrun-plugins"
 [workspace.dependencies]
 anyrun-plugin = { git = "https://github.com/anyrun-org/anyrun" }
 abi_stable = "0.11.1"
+
+[profile.dev.package."*"]
+opt-level = "z"
+
+[profile.release]
+opt-level = "z"
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"

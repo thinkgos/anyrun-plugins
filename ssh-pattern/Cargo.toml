@@ -1,9 +1,9 @@
 [package]
 name = "ssh-pattern"
+version.workspace = true
 authors.workspace = true
 edition.workspace = true
 rust-version.workspace = true
-version.workspace = true
 description = "ssh-pattern is a ssh search plugin for anyrun."
 keywords = ["anyrun", "ssh"]
 license.workspace = true
@@ -17,9 +17,9 @@ crate-type = ["cdylib"]
 [dependencies]
 abi_stable.workspace = true
 anyrun-plugin.workspace = true
+ron.workspace = true
+serde.workspace = true
+which.workspace = true
+fuzzy-matcher.workspace = true
 dirs = "6"
-fuzzy-matcher = "0.3"
-ron = "0.12"
-serde = { version = "1", features = ["derive"] }
 ssh2-config = "0.7"
-which = "8"

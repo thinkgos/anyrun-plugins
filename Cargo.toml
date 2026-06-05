@@ -17,6 +17,10 @@ repository = "https://github.com/thinkgos/anyrun-plugins"
 [workspace.dependencies]
 anyrun-plugin = { git = "https://github.com/anyrun-org/anyrun" }
 abi_stable = "0.11.1"
+ron = "0.12"
+serde = { version = "1", features = ["derive"] }
+which = "8"
+fuzzy-matcher = "0.3"
 
 [profile.dev.package."*"]
 opt-level = "z"

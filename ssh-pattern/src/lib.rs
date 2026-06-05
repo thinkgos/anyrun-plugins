@@ -113,7 +113,7 @@ fn init(config_dir: RString) -> State {
 #[info]
 fn info() -> PluginInfo {
     PluginInfo {
-        name: "ssh-pattern".into(),
+        name: "SshPattern".into(),
         icon: "computer".into(),
     }
 }

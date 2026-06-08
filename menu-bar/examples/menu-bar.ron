@@ -1,0 +1,42 @@
+// <Anyrun config dir>/menu-bar.ron
+Config(
+  // The prefix that triggers the plugin
+  prefix: ":m",
+  // The delimiter to select the menu item
+  delimiter: '/',
+  // Maximum number of entries to return
+  max_entries: 10,
+  // The terminal used for running terminal based menu items
+  // If left as None, the plugin auto-detects from:
+  // alacritty, kitty, ghostty, wezterm, foot, wterm
+  terminal: Some(Terminal(
+    // The main terminal command
+    command: "alacritty",
+    // What arguments should be passed to the terminal process to run the command correctly
+    // {} is replaced with the command in the desktop entry
+    args: "-e {}",
+  )),
+  // The menus defined in the plugin
+  menus: [
+    Menu(
+      title: "Dev Tools",
+      key: 'd',
+      description: Some("Development utilities"),
+      children: [
+        MenuItem(
+          title: "Color Picker",
+          description: Some("Pick a color from screen"),
+          exec: "echo 'pick a color'",
+          // Set to true to run in terminal
+          // term: false,
+        ),
+        MenuItem(
+          title: "Top",
+          description: Some("System monitor"),
+          exec: "top",
+          term: true,
+        ),
+      ],
+    ),
+  ],
+)

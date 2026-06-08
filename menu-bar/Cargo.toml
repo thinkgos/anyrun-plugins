@@ -1,0 +1,23 @@
+[package]
+name = "menu-bar"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "menu-bar is a hierarchical menu bar plugin for anyrun."
+keywords = ["anyrun", "menu", "bar"]
+license.workspace = true
+readme.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+abi_stable.workspace = true
+anyrun-plugin.workspace = true
+ron.workspace = true
+serde.workspace = true
+fuzzy-matcher.workspace = true
+which.workspace = true

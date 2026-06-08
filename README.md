@@ -9,6 +9,7 @@ A collection of [anyrun](https://github.com/anyrun-org/anyrun) plugins written i
 | Plugin        | Description                                                       |
 |---------------|-------------------------------------------------------------------|
 | `ssh-pattern` | Fuzzy-search and connect to hosts defined in your SSH config files,<br> more information in [`ssh-pattern/README.md`](ssh-pattern/README.md). |
+| `menu-bar`    | Two-level hierarchical menu bar for launching commands,<br> more information in [`menu-bar/README.md`](menu-bar/README.md). |
 
 ## Repository Layout
 
@@ -18,6 +19,7 @@ anyrun-plugins/
 ├── flake.nix             # Nix flake (dev shell + per-plugin packages)
 ├── nix/
 │   └── plugin.nix        # Reusable builder for each plugin
+├── menu-bar/             # Hierarchical menu bar plugin
 └── ssh-pattern/          # SSH search plugin
 ```
 

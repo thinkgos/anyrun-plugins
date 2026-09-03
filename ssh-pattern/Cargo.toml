@@ -22,4 +22,4 @@ serde.workspace = true
 which.workspace = true
 fuzzy-matcher.workspace = true
 dirs = "6"
-ssh2-config = "0.7"
+ssh2-config = "0.8"

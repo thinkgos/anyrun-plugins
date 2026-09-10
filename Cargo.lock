@@ -172,6 +172,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "dirs"
+version = "7.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8d57d423b3c82e89b9a24ca3091fee61f456a26edbd28d26c65906f4bc1dcd8f"
+dependencies = [
+ "dirs-sys",
+]
+
+[[package]]
 name = "dirs-sys"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -723,7 +732,7 @@ version = "0.1.0"
 dependencies = [
  "abi_stable",
  "anyrun-plugin",
- "dirs",
+ "dirs 7.0.0",
  "fuzzy-matcher",
  "ron",
  "serde",
@@ -739,7 +748,7 @@ checksum = "a2e5a3352c5c624ed815d37c1c4c760aeaa119352091ca93ca5566f4ad48562c"
 dependencies = [
  "anyhow",
  "bitflags",
- "dirs",
+ "dirs 6.0.0",
  "git2",
  "glob",
  "log",
